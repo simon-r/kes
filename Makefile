@@ -32,7 +32,7 @@ CPPFLAGS=-std=c++11 -Wall -Werror -pedantic -O2 -funroll-loops -fopenmp -mpopcnt
 INC=-I$(CURDIR) -I$(GMP_INCLUDE_DIR) -I$(MPFR_INCLUDE_DIR) -I$(FLINT_INCLUDE_DIR) -I$(ARB_INCLUDE_DIR)
 
 # Note: On Debian systems, libarb is called libflint-arb
-LIB=-L$(CURDIR) -L$(ARB_LIB_DIR) -L$(FLINT_LIB_DIR) -L$(GMP_LIB_DIR) -L$(MPFR_LIB_DIR) -lflint-arb -lflint -lgmp -lmpfr -lpthread -lm
+LIB=-L$(CURDIR) -L$(ARB_LIB_DIR) -L$(FLINT_LIB_DIR) -L$(GMP_LIB_DIR) -L$(MPFR_LIB_DIR) -larb -lflint -lgmp -lmpfr -lpthread -lm
 
 
 all: kes ekes rekes quadrature genzkeister test enumtest

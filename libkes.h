@@ -32,7 +32,7 @@ int find_multi_extension(fmpq_poly_t, const fmpq_poly_t, const int, const int[],
 
 void recursiv_enumerate(const fmpq_poly_t, const int, const int, const int, fmpz_mat_t, const int, const int);
 
-inline void compute_nodes(acb_ptr, const fmpq_poly_t, const long, const int);
+void compute_nodes(acb_ptr, const fmpq_poly_t, const long, const int);
 void compute_nodes_and_weights(acb_ptr, acb_ptr, const fmpq_poly_t, const long, const int);
 
 int validate_rule(long*, long*, const fmpq_poly_t, const long, const int);
@@ -305,7 +305,7 @@ void recursive_enumerate(const fmpq_poly_t Pn,
 }
 
 
-inline void compute_nodes(acb_ptr nodes,
+void compute_nodes(acb_ptr nodes,
                           const fmpq_poly_t poly,
                           const long prec,
                           const int loglevel) {
